@@ -35,7 +35,6 @@ const Formulario = () => {
   const handleInputChange = (event) => {
     const auxValues = {...data}
     auxValues[event.target.name] = event.target.value
-    
     setData(auxValues)
   }
 
@@ -46,11 +45,15 @@ const Formulario = () => {
     .then((result) => {
       const resultado =  Object.entries(result.data);
       setResultado(resultado)
-      console.log(resultado)
-      console.log(typeof(resultado))
+      console.log(Object.entries(result.data));
     })
     setPageResult(true)
   };
+
+  const closeResult = () => {
+    console.log(setPageResult)
+    setPageResult(false)
+  }
 
   return(
     
@@ -113,13 +116,11 @@ const Formulario = () => {
       
       {pageResult &&(
         <Result>
-          <img src="" alt="close" />
+          <img src="/close.svg" alt="close" onClick={() => closeResult()}/>
           <div>
-            <p>Com o plano faleMais você tem: {resultado[0][1]}</p>
-            <p>Sem o plano faleMais você tem: {resultado[1][1]}</p>
+            <p>O valor da sua ligação <strong>com</strong> o plano <strong>FaleMais</strong>: <strong>{resultado[0][1]}</strong></p>
+            <p>O valor da sua ligação sem o plano FaleMais: <strong>{resultado[1][1]}</strong></p>
           </div>
-          
-          
         </Result>
       )}
     </Wrapper>

@@ -72,8 +72,3 @@ export const Plano = styled.li`
   align-items: center;
   
 `
-
-export const Label = styled.label`
-  
-`
-

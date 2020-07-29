@@ -93,16 +93,28 @@ export const SubmitButton = styled.button.attrs({
 
 
 export const Result = styled.div`
-  background: #7E57C2;
+  background: #fefefe;
   position: absolute;
   left: 50%;
   top: 50%;
   padding: 50px;
-  border: #512996 solid 1px;
+  border: #512996 solid 3px;
   border-radius: 25px;
   transform: translate(-50%, -50%);
   box-shadow: 0 6px 10px 0 rgba(0,0,0,0.20);
+  opacity: 0.9;
   p {
-    color: #fff;
+    color: #7E57C2;
+  }
+  strong {
+    color:#512996;
+  }
+  img {
+    width: 35px;
+    position: absolute;
+    right:10px;
+    top: 15px;
+    z-index: 1000;
+    cursor: pointer;
   }
 `;
