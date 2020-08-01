@@ -1,9 +1,7 @@
 const TARIFAS = {
-  "011": {"016": 1.9},
+  "011": {"016": 1.90, "017": 1.70, "018": 0.90},
   "016": {"011": 2.9},
-  "011": {"017": 1.7},
   "017": {"011": 2.7},
-  "011": {"018": 0.9},
   "018": {"018": 1.9}
 }
 
@@ -23,8 +21,6 @@ class CalculadoraDeTarifa {
     if (this.ligacao.duracao <= this.ligacao.plano.franquia) {
       return 0
     }
-    console.log("franquia>>>>>>", this.ligacao.plano.franquia)
-    console.log("acrescimo>>>>>>", this.ligacao.plano.acrescimo)
 
     const duracaoSemFranquia = this.ligacao.duracao - this.ligacao.plano.franquia;
     return (duracaoSemFranquia * TARIFAS[this.ligacao.dddOrigem][this.ligacao.dddDestino]) * this.ligacao.plano.acrescimo;

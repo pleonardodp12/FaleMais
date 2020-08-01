@@ -45,13 +45,11 @@ const Formulario = () => {
     .then((result) => {
       const resultado =  Object.entries(result.data);
       setResultado(resultado)
-      console.log(Object.entries(result.data));
     })
     setPageResult(true)
   };
 
   const closeResult = () => {
-    console.log(setPageResult)
     setPageResult(false)
   }
 

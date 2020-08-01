@@ -1,8 +1,6 @@
 const express = require('express');
 const Ligacao = require('./src/ligacao');
 const CalculadoraDeTarifa = require('./src/calculadoraDeTarifa');
-const bodyParser = require('body-parser')
-
 
 const app = new express();
 
@@ -20,8 +18,8 @@ app.post('/tarifa', (req, res) => {
   console.log(`Sem plano: ${calculadora.calcularValorSemPlano()}`);
   
   res.send({
-    custoLigacaoComPlano: calculadora.calculaValorComPlano(),
-    custodaLigacaoSemPlano: calculadora.calcularValorSemPlano()
+    custoLigacaoComPlano: calculadora.calculaValorComPlano().toFixed(2),
+    custodaLigacaoSemPlano: calculadora.calcularValorSemPlano().toFixed(2)
   })
 })
 

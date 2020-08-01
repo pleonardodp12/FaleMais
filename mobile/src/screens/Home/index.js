@@ -8,11 +8,10 @@ import { Wrapper, Info, ListaItems, Plano, Label, Button,TextButton } from './st
 export default function Home() {
   const navigation = useNavigation();
 
-  function handleNavigateToPoints (){
+  function handleNavigateToFaleMais (){
     navigation.navigate('FaleMais')
   }
   return (
-
     <Wrapper>
         <img src={img} alt="imagem"/>
         <Info>
@@ -25,7 +24,7 @@ export default function Home() {
             <Label>Com o plano FaleMais120 você terá 120 minutos gratuitos de ligação.</Label>
           </ListaItems>
         </Info>
-        <Button onPress={handleNavigateToPoints}>
+        <Button onPress={handleNavigateToFaleMais}>
             <TextButton>Experimente agora!</TextButton>
         </Button>
     </Wrapper>
