@@ -41,12 +41,15 @@ const Formulario = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log(data);
     await api.post('/tarifa', data)
     .then((result) => {
-      const resultado =  Object.entries(result.data);
+      const resultado = Object.entries(result.data);
+      
       setResultado(resultado)
     })
     setPageResult(true)
+    console.log(data)
   };
 
   const closeResult = () => {
