@@ -86,7 +86,7 @@ $ npm start
 # A aplicação será aberta na porta:3000 - acesse http://localhost:3000
 ```
 
-### 📱 Rodando a aplicação web (Front End)
+### 📱 Rodando a aplicação mobile (Android e IOS)
 
 ```bash
   # Clone este repositório
