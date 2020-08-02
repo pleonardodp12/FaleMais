@@ -54,7 +54,7 @@ $ git clone https://github.com/pleonardodp12/FaleMais
 # Acesse a pasta do projeto no terminal/cmd
 $ cd FaleMais
 
-# Vá para a pasta server
+# Vá para a pasta backend
 $ cd backend
 
 # Instale as dependências
@@ -95,7 +95,7 @@ $ git clone https://github.com/pleonardodp12/FaleMais
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd FaleMais
 
-# Vá para a pasta da aplicação Front End
+# Vá para a pasta da aplicação mobile
 $ cd mobile
 
 # Instale as dependências
